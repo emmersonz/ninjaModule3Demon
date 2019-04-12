@@ -1,0 +1,12 @@
+C:\Users\Emmerson\source\repos\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\NinjaDomain.Classes.dll
+C:\Users\Emmerson\source\repos\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\NinjaDomain.Classes.pdb
+C:\Users\Emmerson\source\repos\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csprojAssemblyReference.cache
+C:\Users\Emmerson\source\repos\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csproj.CoreCompileInputs.cache
+C:\Users\Emmerson\source\repos\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.dll
+C:\Users\Emmerson\source\repos\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.pdb
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\NinjaDomain.Classes\bin\Debug\NinjaDomain.Classes.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\NinjaDomain.Classes\bin\Debug\NinjaDomain.Classes.pdb
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csprojAssemblyReference.cache
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csproj.CoreCompileInputs.cache
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.pdb

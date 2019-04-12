@@ -1,0 +1,12 @@
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\bin\Debug\CodeModelFromDb.dll.config
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\bin\Debug\CodeModelFromDb.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\bin\Debug\CodeModelFromDb.pdb
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\bin\Debug\EntityFramework.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\bin\Debug\EntityFramework.xml
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\obj\Debug\CodeModelFromDb.csprojAssemblyReference.cache
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\obj\Debug\CodeModelFromDb.csproj.CoreCompileInputs.cache
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\obj\Debug\CodeModelFromDb.csproj.CopyComplete
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\obj\Debug\CodeModelFromDb.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\CodeModelFromDb\obj\Debug\CodeModelFromDb.pdb

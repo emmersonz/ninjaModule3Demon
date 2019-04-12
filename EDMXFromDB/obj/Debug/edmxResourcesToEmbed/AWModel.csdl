@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyFirstAzureDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="ufnGetAllCategories_Result">
+    <Property Name="ParentProductCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductCategoryID" Type="Int32" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Color" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="StandardCost" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ListPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="ProductCategoryID" Type="Int32" />
+    <Property Name="ProductModelID" Type="Int32" />
+    <Property Name="SellStartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SellEndDate" Type="DateTime" Precision="3" />
+    <Property Name="DiscontinuedDate" Type="DateTime" Precision="3" />
+    <Property Name="ThumbNailPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ThumbnailPhotoFileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ProductCategory" Relationship="Self.FK_Product_ProductCategory_ProductCategoryID" FromRole="Product" ToRole="ProductCategory" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentProductCategoryID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_ProductCategory_ProductCategoryID" FromRole="ProductCategory" ToRole="Product" />
+    <NavigationProperty Name="ProductCategory1" Relationship="Self.FK_ProductCategory_ProductCategory_ParentProductCategoryID_ProductCategoryID" FromRole="ProductCategory" ToRole="ProductCategory1" />
+    <NavigationProperty Name="ProductCategory2" Relationship="Self.FK_ProductCategory_ProductCategory_ParentProductCategoryID_ProductCategoryID" FromRole="ProductCategory1" ToRole="ProductCategory" />
+  </EntityType>
+  <EntityType Name="ProductDescription">
+    <Key>
+      <PropertyRef Name="ProductDescriptionID" />
+    </Key>
+    <Property Name="ProductDescriptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ProductModelProductDescriptions" Relationship="Self.FK_ProductModelProductDescription_ProductDescription_ProductDescriptionID" FromRole="ProductDescription" ToRole="ProductModelProductDescription" />
+  </EntityType>
+  <EntityType Name="ProductModelProductDescription">
+    <Key>
+      <PropertyRef Name="ProductModelID" />
+      <PropertyRef Name="ProductDescriptionID" />
+      <PropertyRef Name="Culture" />
+    </Key>
+    <Property Name="ProductModelID" Type="Int32" Nullable="false" />
+    <Property Name="ProductDescriptionID" Type="Int32" Nullable="false" />
+    <Property Name="Culture" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ProductDescription" Relationship="Self.FK_ProductModelProductDescription_ProductDescription_ProductDescriptionID" FromRole="ProductModelProductDescription" ToRole="ProductDescription" />
+  </EntityType>
+  <EntityType Name="vGetAllCategory">
+    <Key>
+      <PropertyRef Name="ParentProductCategoryName" />
+    </Key>
+    <Property Name="ParentProductCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCategoryID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vProductAndDescription">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="ProductModel" />
+      <PropertyRef Name="Culture" />
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductModel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Culture" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vProductModelCatalogDescription">
+    <Key>
+      <PropertyRef Name="ProductModelID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="rowguid" />
+      <PropertyRef Name="ModifiedDate" />
+    </Key>
+    <Property Name="ProductModelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Copyright" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ProductURL" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="WarrantyPeriod" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="WarrantyDescription" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfYears" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MaintenanceDescription" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Wheel" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Saddle" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Pedal" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="BikeFrame" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Crankset" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PictureAngle" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PictureSize" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPhotoID" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Material" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ProductLine" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Style" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="RiderExperience" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK_Product_ProductCategory_ProductCategoryID">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_ProductCategory_ParentProductCategoryID_ProductCategoryID">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="0..1" />
+    <End Role="ProductCategory1" Type="Self.ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="ProductCategory1">
+        <PropertyRef Name="ParentProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductModelProductDescription_ProductDescription_ProductDescriptionID">
+    <End Role="ProductDescription" Type="Self.ProductDescription" Multiplicity="1" />
+    <End Role="ProductModelProductDescription" Type="Self.ProductModelProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductDescription">
+        <PropertyRef Name="ProductDescriptionID" />
+      </Principal>
+      <Dependent Role="ProductModelProductDescription">
+        <PropertyRef Name="ProductDescriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MyFirstAzureDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductCategories" EntityType="Self.ProductCategory" />
+    <EntitySet Name="ProductDescriptions" EntityType="Self.ProductDescription" />
+    <EntitySet Name="ProductModelProductDescriptions" EntityType="Self.ProductModelProductDescription" />
+    <EntitySet Name="vGetAllCategories" EntityType="Self.vGetAllCategory" />
+    <EntitySet Name="vProductAndDescriptions" EntityType="Self.vProductAndDescription" />
+    <EntitySet Name="vProductModelCatalogDescriptions" EntityType="Self.vProductModelCatalogDescription" />
+    <AssociationSet Name="FK_Product_ProductCategory_ProductCategoryID" Association="Self.FK_Product_ProductCategory_ProductCategoryID">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_ProductCategory_ParentProductCategoryID_ProductCategoryID" Association="Self.FK_ProductCategory_ProductCategory_ParentProductCategoryID_ProductCategoryID">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="ProductCategory1" EntitySet="ProductCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductModelProductDescription_ProductDescription_ProductDescriptionID" Association="Self.FK_ProductModelProductDescription_ProductDescription_ProductDescriptionID">
+      <End Role="ProductDescription" EntitySet="ProductDescriptions" />
+      <End Role="ProductModelProductDescription" EntitySet="ProductModelProductDescriptions" />
+    </AssociationSet>
+    <FunctionImport Name="ufnGetAllCategories" IsComposable="true" ReturnType="Collection(MyFirstAzureDbModel.ufnGetAllCategories_Result)" />
+    <FunctionImport Name="uspLogError">
+      <Parameter Name="ErrorLogID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

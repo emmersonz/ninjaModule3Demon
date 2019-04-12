@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyFirstAzureDbModelStoreContainer" CdmEntityContainer="MyFirstAzureDbEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="MyFirstAzureDbModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductNumber" ColumnName="ProductNumber" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="StandardCost" ColumnName="StandardCost" />
+          <ScalarProperty Name="ListPrice" ColumnName="ListPrice" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+          <ScalarProperty Name="ProductModelID" ColumnName="ProductModelID" />
+          <ScalarProperty Name="SellStartDate" ColumnName="SellStartDate" />
+          <ScalarProperty Name="SellEndDate" ColumnName="SellEndDate" />
+          <ScalarProperty Name="DiscontinuedDate" ColumnName="DiscontinuedDate" />
+          <ScalarProperty Name="ThumbNailPhoto" ColumnName="ThumbNailPhoto" />
+          <ScalarProperty Name="ThumbnailPhotoFileName" ColumnName="ThumbnailPhotoFileName" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="MyFirstAzureDbModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+          <ScalarProperty Name="ParentProductCategoryID" ColumnName="ParentProductCategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductDescriptions">
+      <EntityTypeMapping TypeName="MyFirstAzureDbModel.ProductDescription">
+        <MappingFragment StoreEntitySet="ProductDescription">
+          <ScalarProperty Name="ProductDescriptionID" ColumnName="ProductDescriptionID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductModelProductDescriptions">
+      <EntityTypeMapping TypeName="MyFirstAzureDbModel.ProductModelProductDescription">
+        <MappingFragment StoreEntitySet="ProductModelProductDescription">
+          <ScalarProperty Name="ProductModelID" ColumnName="ProductModelID" />
+          <ScalarProperty Name="ProductDescriptionID" ColumnName="ProductDescriptionID" />
+          <ScalarProperty Name="Culture" ColumnName="Culture" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vGetAllCategories">
+      <EntityTypeMapping TypeName="MyFirstAzureDbModel.vGetAllCategory">
+        <MappingFragment StoreEntitySet="vGetAllCategories">
+          <ScalarProperty Name="ParentProductCategoryName" ColumnName="ParentProductCategoryName" />
+          <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vProductAndDescriptions">
+      <EntityTypeMapping TypeName="MyFirstAzureDbModel.vProductAndDescription">
+        <MappingFragment StoreEntitySet="vProductAndDescription">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductModel" ColumnName="ProductModel" />
+          <ScalarProperty Name="Culture" ColumnName="Culture" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vProductModelCatalogDescriptions">
+      <EntityTypeMapping TypeName="MyFirstAzureDbModel.vProductModelCatalogDescription">
+        <MappingFragment StoreEntitySet="vProductModelCatalogDescription">
+          <ScalarProperty Name="ProductModelID" ColumnName="ProductModelID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Copyright" ColumnName="Copyright" />
+          <ScalarProperty Name="ProductURL" ColumnName="ProductURL" />
+          <ScalarProperty Name="WarrantyPeriod" ColumnName="WarrantyPeriod" />
+          <ScalarProperty Name="WarrantyDescription" ColumnName="WarrantyDescription" />
+          <ScalarProperty Name="NoOfYears" ColumnName="NoOfYears" />
+          <ScalarProperty Name="MaintenanceDescription" ColumnName="MaintenanceDescription" />
+          <ScalarProperty Name="Wheel" ColumnName="Wheel" />
+          <ScalarProperty Name="Saddle" ColumnName="Saddle" />
+          <ScalarProperty Name="Pedal" ColumnName="Pedal" />
+          <ScalarProperty Name="BikeFrame" ColumnName="BikeFrame" />
+          <ScalarProperty Name="Crankset" ColumnName="Crankset" />
+          <ScalarProperty Name="PictureAngle" ColumnName="PictureAngle" />
+          <ScalarProperty Name="PictureSize" ColumnName="PictureSize" />
+          <ScalarProperty Name="ProductPhotoID" ColumnName="ProductPhotoID" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ProductLine" ColumnName="ProductLine" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="RiderExperience" ColumnName="RiderExperience" />
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="MyFirstAzureDbModel.Store.ufnGetAllCategories" FunctionImportName="ufnGetAllCategories">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MyFirstAzureDbModel.ufnGetAllCategories_Result">
+          <ScalarProperty Name="ParentProductCategoryName" ColumnName="ParentProductCategoryName" />
+          <ScalarProperty Name="ProductCategoryName" ColumnName="ProductCategoryName" />
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspLogError" FunctionName="MyFirstAzureDbModel.Store.uspLogError" />
+  </EntityContainerMapping>
+</Mapping>

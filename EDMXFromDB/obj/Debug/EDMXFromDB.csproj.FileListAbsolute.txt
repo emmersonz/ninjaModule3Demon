@@ -1,0 +1,12 @@
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\bin\Debug\EDMXFromDB.dll.config
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\bin\Debug\EDMXFromDB.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\bin\Debug\EDMXFromDB.pdb
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\bin\Debug\EntityFramework.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\bin\Debug\EntityFramework.xml
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\obj\Debug\EDMXFromDB.csprojAssemblyReference.cache
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\obj\Debug\EDMXFromDB.csproj.CoreCompileInputs.cache
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\obj\Debug\EDMXFromDB.csproj.CopyComplete
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\obj\Debug\EDMXFromDB.dll
+C:\Users\Emmerson\source\repos\ninjaModule3Demon\EDMXFromDB\obj\Debug\EDMXFromDB.pdb
